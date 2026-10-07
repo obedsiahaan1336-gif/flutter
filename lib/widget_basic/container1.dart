@@ -13,8 +13,8 @@ class _Container1State extends State<Container1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         height: 300,
         width: double.infinity,
@@ -22,8 +22,8 @@ class _Container1State extends State<Container1> {
         decoration: BoxDecoration(
           color: Colors.grey,
           borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-    );
+        ), // BoxDecoration
+      ), // Container
+    ); // Scaffold
   }
 }

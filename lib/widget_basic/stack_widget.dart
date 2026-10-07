@@ -8,18 +8,19 @@ class StackWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Stack'),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
-          children: [
+        // ignore: prefer_const_constructors
+        child: Column(
+          children: const [
             Stack(
               clipBehavior: Clip.none,
               children: [
                 Icon(
                   Icons.shopping_cart,
                   size: 50,
-                ),
+                ), // Icon
                 Positioned(
                   top: -4.0,
                   right: -4.0,
@@ -32,15 +33,15 @@ class StackWidget extends StatelessWidget {
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+                      ), // TextStyle
+                    ), // Text
+                  ), // CircleAvatar
+                ), // Positioned
               ],
-            ),
+            ), // Stack
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

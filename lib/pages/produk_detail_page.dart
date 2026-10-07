@@ -13,7 +13,9 @@ class ProdukDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Detail Produk')),
+      appBar: AppBar(
+        title: const Text('Detail Produk'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -21,13 +23,26 @@ class ProdukDetailPage extends StatelessWidget {
           children: [
             Text(
               namaProduk,
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ), // Text
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             const SizedBox(height: 8),
+
             Text('Rp $harga'),
+
+            const SizedBox(height: 24),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context, namaProduk);
+              },
+              child: const Text('Pilih Produk Ini'),
+            ),
           ],
-        ), // Column
-      ), // Padding
-    ); // Scaffold
+        ),
+      ),
+    );
   }
 }

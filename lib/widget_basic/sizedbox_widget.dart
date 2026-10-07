@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class SizedBoxWidget extends StatelessWidget {
-  const SizedBoxWidget({super.key});
+  // ignore: use_super_parameters
+  const SizedBoxWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('SizedBox'),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -19,8 +20,8 @@ class SizedBoxWidget extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
-              ),
-            ),
+              ), // TextStyle
+            ), // Text
             const SizedBox(height: 8.0),
             const Text(
               "Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.",
@@ -28,22 +29,22 @@ class SizedBoxWidget extends StatelessWidget {
                 color: Colors.grey,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
-              ),
-            ),
+              ), // TextStyle
+            ), // Text
             const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "Size",
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                      ), // TextStyle
+                    ), // Text
                     SizedBox(height: 4.0),
                     Text(
                       "Height 120 cm",
@@ -51,8 +52,8 @@ class SizedBoxWidget extends StatelessWidget {
                         fontSize: 16.0,
                         color: Colors.grey,
                         fontWeight: FontWeight.normal,
-                      ),
-                    ),
+                      ), // TextStyle
+                    ), // Text
                     SizedBox(height: 2.0),
                     Text(
                       "Width 80 cm",
@@ -60,22 +61,22 @@ class SizedBoxWidget extends StatelessWidget {
                         fontSize: 16.0,
                         color: Colors.grey,
                         fontWeight: FontWeight.normal,
-                      ),
-                    ),
+                      ), // TextStyle
+                    ), // Text
                   ],
-                ),
+                ), // Column
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 2.5,
-                  child: const Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Treatment",
                         style: TextStyle(
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                        ), // TextStyle
+                      ), // Text
                       SizedBox(height: 4.0),
                       Text(
                         "Jati Wood, Canvas",
@@ -83,8 +84,8 @@ class SizedBoxWidget extends StatelessWidget {
                           fontSize: 16.0,
                           color: Colors.grey,
                           fontWeight: FontWeight.normal,
-                        ),
-                      ),
+                        ), // TextStyle
+                      ), // Text
                       SizedBox(height: 2.0),
                       Text(
                         "Amazing Love",
@@ -92,16 +93,16 @@ class SizedBoxWidget extends StatelessWidget {
                           fontSize: 16.0,
                           color: Colors.grey,
                           fontWeight: FontWeight.normal,
-                        ),
-                      ),
+                        ), // TextStyle
+                      ), // Text
                     ],
-                  ),
-                ),
+                  ), // Column
+                ), // SizedBox
               ],
-            ),
+            ), // Row
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

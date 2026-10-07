@@ -13,22 +13,25 @@ class _Column1State extends State<Column1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
+        // ignore: prefer_const_constructors
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             Text(
               'Stylish Chair',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(height: 10),
+              ), // TextStyle
+            ), // Text
+            SizedBox(
+              height: 10,
+            ), // SizedBox
             Text(
               'Rp 350.000',
               style: TextStyle(
@@ -36,11 +39,11 @@ class _Column1State extends State<Column1> {
                 color: Color(0xFF9A9390),
                 fontWeight: FontWeight.w400,
                 letterSpacing: 1,
-              ),
-            ),
+              ), // TextStyle
+            ), // Text
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

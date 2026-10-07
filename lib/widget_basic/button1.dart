@@ -13,8 +13,8 @@ class _Button1State extends State<Button1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -25,8 +25,8 @@ class _Button1State extends State<Button1> {
                 backgroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
-                ),
-                shadowColor: Colors.grey,
+                ), // RoundedRectangleBorder
+                shadowColor: Colors.grey[20],
                 elevation: 5.0,
               ),
               child: Text(
@@ -35,12 +35,12 @@ class _Button1State extends State<Button1> {
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
-                ),
-              ),
-            ),
+                ), // TextStyle
+              ), // Text
+            ), // ElevatedButton
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

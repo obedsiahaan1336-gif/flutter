@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ListViewWidget extends StatelessWidget {
-  ListViewWidget({super.key});
+  // ignore: use_super_parameters
+   ListViewWidget({Key? key}) : super(key: key);
 
   final List<String> categories = [
     'All',
@@ -16,12 +17,11 @@ class ListViewWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("ListView"),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            // ListView horizontal
             SizedBox(
               height: 32,
               child: ListView(
@@ -36,7 +36,7 @@ class ListViewWidget extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.grey,
-                        ),
+                        ), // BoxDecoration
                         padding: const EdgeInsets.symmetric(
                           vertical: 8,
                           horizontal: 24,
@@ -50,15 +50,14 @@ class ListViewWidget extends StatelessWidget {
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 1,
-                          ),
-                        ),
-                      ),
-                    );
+                          ), // TextStyle
+                        ), // Text
+                      ), // AnimatedContainer
+                    ); // GestureDetector
                   },
-                ),
-              ),
-            ),
-            // ListView vertikal
+                ), // List.generate
+              ), // ListView
+            ), // SizedBox
             Expanded(
               child: ListView.builder(
                 itemCount: categories.length,
@@ -70,7 +69,7 @@ class ListViewWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.grey,
-                      ),
+                      ), // BoxDecoration
                       padding: const EdgeInsets.symmetric(
                         vertical: 8,
                         horizontal: 24,
@@ -87,16 +86,16 @@ class ListViewWidget extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
                           letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  );
+                        ), // TextStyle
+                      ), // Text
+                    ), // AnimatedContainer
+                  ); // GestureDetector
                 },
-              ),
-            ),
+              ), // ListView.builder
+            ), // Expanded
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

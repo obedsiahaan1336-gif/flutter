@@ -13,22 +13,24 @@ class _Avatar1State extends State<Avatar1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
+        // ignore: prefer_const_constructors
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 50,
               backgroundImage: NetworkImage(
                 "https://randomuser.me/api/portraits/men/32.jpg",
-              ),
-            ),
+              ), // NetworkImage
+            ), // CircleAvatar
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

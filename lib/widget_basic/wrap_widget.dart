@@ -22,7 +22,7 @@ class WrapWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Wrap'),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -45,16 +45,16 @@ class WrapWidget extends StatelessWidget {
                           color: Colors.black.withOpacity(0.1),
                           offset: Offset.zero,
                           blurRadius: 15,
-                        ),
+                        ), // BoxShadow
                       ],
-                    ),
-                  ),
-                );
+                    ), // BoxDecoration
+                  ), // Container
+                ); // InkWell
               }).toList(),
-            ),
+            ), // Wrap
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

@@ -7,8 +7,8 @@ class GridViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GridView'),
-      ),
+        title: const Text('GriView'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -33,17 +33,17 @@ class GridViewWidget extends StatelessWidget {
                             color: Colors.black.withOpacity(0.2),
                             offset: Offset.zero,
                             blurRadius: 15.0,
-                          ),
+                          ), // BoxShadow
                         ],
-                      ),
-                    ),
-                  ),
+                      ), // BoxDecoration
+                    ), // Container
+                  ), // List.generate
                 ],
-              ),
-            ),
+              ), // GridView.count
+            ), // Expanded
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

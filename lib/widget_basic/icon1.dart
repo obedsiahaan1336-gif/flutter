@@ -13,24 +13,25 @@ class _Icon1State extends State<Icon1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
-          children: [
+        // ignore: prefer_const_constructors
+        child: Column(
+          children: const [
             Icon(
               Icons.share,
               size: 32.0,
-            ),
+            ), // Icon
             Icon(
               Icons.favorite,
               size: 36.0,
               color: Colors.red,
-            ),
+            ), // Icon
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

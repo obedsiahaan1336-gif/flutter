@@ -14,23 +14,24 @@ class _Text1State extends State<Text1> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Simple Code'),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
-          children: [
+        // ignore: prefer_const_constructors
+        child: Column(
+          children: const [
             Text(
-              'Discover the most modern furniture',
+              'Anime Mushoku Tensei itu peak',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 22.0,
                 fontWeight: FontWeight.w500,
                 letterSpacing: 1,
-              ),
-            ),
+              ), // TextStyle
+            ), // Text
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

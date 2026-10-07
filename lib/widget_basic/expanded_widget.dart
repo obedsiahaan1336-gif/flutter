@@ -8,13 +8,13 @@ class ExpandedWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Expanded'),
-      ),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: const Column(
+        child: Column(
           children: [
             Row(
-              children: [
+              children: const [
                 Icon(Icons.arrow_back_ios),
                 Expanded(
                   child: Padding(
@@ -22,18 +22,18 @@ class ExpandedWidget extends StatelessWidget {
                     child: Text(
                       'List Checklist',
                       style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                ),
+                    ), // Text
+                  ), // Padding
+                ), // Expanded
                 Icon(
                   Icons.check,
                   color: Colors.blue,
-                ),
+                ), // Icon
               ],
-            ),
+            ), // Row
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }

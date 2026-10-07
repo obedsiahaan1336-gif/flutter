@@ -13,29 +13,40 @@ class ProdukListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Daftar Produk')),
+      appBar: AppBar(
+        title: const Text('Daftar Produk'),
+      ),
       body: ListView.builder(
         itemCount: produk.length,
         itemBuilder: (context, index) {
           final item = produk[index];
+
           return ListTile(
             title: Text(item['nama']),
             subtitle: Text('Rp ${item['harga']}'),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Navigator.push(
+            onTap: () async {
+              final hasilPilihan = await Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProdukDetailPage(
                     namaProduk: item['nama'],
                     harga: item['harga'],
                   ),
-                ), // MaterialPageRoute
-              ); // Navigator.push
+                ),
+              );
+
+              if (hasilPilihan != null) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Anda memilih: $hasilPilihan'),
+                  ),
+                );
+              }
             },
-          ); // ListTile
+          );
         },
-      ), // ListView.builder
-    ); // Scaffold
+      ),
+    );
   }
 }

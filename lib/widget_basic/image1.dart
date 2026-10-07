@@ -13,8 +13,8 @@ class _Image1State extends State<Image1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('simple code'),
-      ),
+        title: const Text('Simple Code'),
+      ), // AppBar
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -23,12 +23,12 @@ class _Image1State extends State<Image1> {
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
-              ),
-              child: Image.asset('assets/images/кіт на фоні вибуху.jpeg'),
-            ),
+              ), // BorderRadius.only
+              child: Image.asset('assets/images/кіт на фоні вибуху.jpg'),
+            ), // ClipRRect
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Container
+    ); // Scaffold
   }
 }
